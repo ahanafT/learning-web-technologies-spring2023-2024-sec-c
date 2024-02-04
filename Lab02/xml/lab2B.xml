@@ -1,0 +1,23 @@
+<students>
+    <heading>
+        <Sl.no> SL.NO.</Sl.no>
+        <name> NAME </name>
+        <admissiondate> ADMISSION DATE  </admissiondate>
+     </heading>
+    <student>
+      <Sl.no> 23 </Sl.no>
+        <name> John Carter </name>
+        <admissiondate> 25/12/2015 </admissiondate>
+    </student>
+    <student>
+    <Sl.no> 29 </Sl.no>
+        <name> Bob Marshal </name>
+        <admissiondate> 13/01/1999 </admissiondate>
+         </student>
+    <student>
+     <Sl.no> 35 </Sl.no>
+        <name> Clark Kent </name>
+        <admissiondate> 17/06/2005 </admissiondate>
+           </student>
+    
+</students>
