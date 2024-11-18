@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Box Layout</title>
+    <link rel="stylesheet" href="Lab4.css">
+</head>
+
+<body>
+
+    <div class="container-vertical">
+        <div class="box">
+            <img src="104701845.webp" alt="Image 1">
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <div class="container-row">
+        <div class="box-row">
+            <img src="istockphoto-495477978-612x612.jpg" alt="Image 1">
+        </div>
+        <div class="box-row">
+            <img src="istockphoto-173015527-612x612.jpg" alt="Image 2">
+        </div>
+        <div class="box-row">
+            <img src="gettyimages-532852345-612x612.jpg" alt="Image 3">
+        </div>
+    </div>
+
+    <div class="container-row">
+        <div class="box-large">
+            <form action="next_page.html" method="POST" class="borrow-form">
+                <label for="student-name">Student Full Name:</label>
+                <input type="text" id="student-name" name="student-name" required>
+
+                <label for="student-id">Student ID:</label>
+                <input type="text" id="student-id" name="student-id" required>
+
+                <label for="book-title">Book Title:</label>
+                <select id="book-title" name="book-title" required>
+                    <option value="Book1">Book 1</option>
+                    <option value="Book2">Book 2</option>
+                    <option value="Book3">Book 3</option>
+                    <option value="Book4">Book 4</option>
+                    <option value="Book5">Book 5</option>
+                    <option value="Book6">Book 6</option>
+                    <option value="Book7">Book 7</option>
+                    <option value="Book8">Book 8</option>
+                    <option value="Book9">Book 9</option>
+                    <option value="Book10">Book 10</option>
+                </select>
+
+                <label for="borrow-date">Borrow Date:</label>
+                <input type="date" id="borrow-date" name="borrow-date" required>
+
+                <label for="token">Token:</label>
+                <input type="text" id="token" name="token" required>
+
+                <label for="return-date">Return Date:</label>
+                <input type="date" id="return-date" name="return-date" required>
+
+                <label for="fees">Fees:</label>
+                <input type="number" id="fees" name="fees" min="0" step="0.01" required>
+
+                <label for="paid">Paid:</label>
+                <select id="paid" name="paid" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- The right box for the new form -->
+        <div class="box-small">
+            <!-- New form for book information -->
+            <form action="submit_book_info.html" method="POST" class="book-info-form">
+                <label for="book-name">Book Name:</label>
+                <input type="text" id="book-name" name="book-name" required>
+
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn" name="isbn" required>
+
+                <label for="count">Count:</label>
+                <input type="number" id="count" name="count" min="1" required>
+
+                <label for="category">Category:</label>
+                <select id="category" name="category" required>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-Fiction">Non-Fiction</option>
+                    <option value="Science">Science</option>
+                    <option value="Math">Math</option>
+                    <option value="Technology">Technology</option>
+                    <option value="History">History</option>
+                </select>
+
+                <button type="submit">Submit Book Info</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>
