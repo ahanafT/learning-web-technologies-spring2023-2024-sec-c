@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Box Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <div class="left-aligned-container">
+    <div class="image-box">
+      <img src="Capture.png" alt="Dspo">
+    </div>
+  </div>
+
+<div class="bodyy">
+<div class="container-vertical">
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
+
+<div class="container-row">
+  <div class="box-row">
+    <img src="img1.jpg" alt="Image 1">
+  </div>
+  <div class="box-row">
+    <img src="img2.jpg" alt="Image 2">
+  </div>
+  <div class="box-row">
+    <img src="img3.jpg" alt="Image 3">
+  </div>
+</div>
+
+<div class="container-row">
+  <div class="box-large">
+    <form action="datecondition.php" method="POST" id="borrowForm" class="borrow-form">
+      <h3>User Information</h3>
+      <label for="student-name">Student Full Name:</label>
+      <input type="text" id="student-name" name="student-name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="student-id">Student ID (Format: 21-45***-3):</label>
+      <input type="text" id="student-id" name="student-id" pattern="\d{2}-\d{5}-\d" title="Enter a valid ID in the format XX-XXXXX-X" required>
+
+      <label for="borrow-date">Borrow Date:</label>
+      <input type="date" id="borrow-date" name="borrow-date" required>
+
+      <label for="return-date">Return Date:</label>
+      <input type="date" id="return-date" name="return-date" required>
+
+      <label for="token">Token (for borrow period over 10 days):</label>
+      <input type="text" id="token" name="token" placeholder="Enter token if borrowing for more than 10 days">
+
+      <label for="fees">Fees:</label>
+      <input type="number" id="fees" name="fees" min="0" step="0.01" required>
+
+      <label for="paid">Paid:</label>
+      <select id="paid" name="paid" required>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </form>
+  </div>
+
+  <div class="box-small">
+    <h3>Book Details</h3>
+    <label for="book-name">Book Name:</label>
+    <input type="text" id="book-name" name="book-name" form="borrowForm" required>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" form="borrowForm" required>
+
+    <label for="isbn">ISBN:</label>
+    <input type="text" id="isbn" name="isbn" form="borrowForm" required>
+
+    <label for="count">Count:</label>
+    <input type="number" id="count" name="count" form="borrowForm" min="1" required>
+
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="category" form="borrowForm" required>
+  </div>
+</div>
+
+<div style="text-align: center; margin-top: 20px;">
+  <button type="submit" form="borrowForm">Submit</button>
+</div>
+</body>
+</html>
